@@ -9,7 +9,13 @@
             {{ end }}
           </ul>
         </nav>
-        <p class="footnote">Made with <a href="http://hugo.spf13.com/">Hugo</a> and a bit of love.</p>
+        {{ with .Site.Params.FootNote }}
+        <p class="footnote">{{ . | safeHtml }}</p>
+        {{ end }}
+
+        {{ with .Site.Params.CopyrightNotice }}
+        <p class="footnote">{{ . | safeHtml}}</p>
+        {{ end }}
       </div>
     </footer>
 
