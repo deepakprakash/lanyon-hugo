@@ -1,4 +1,17 @@
     </div>
 
+    <footer>
+      <div class="container">
+        <nav>
+          <ul class="menu">
+            {{ range .Site.Menus.footer }}
+              <li class="menu-item"><a href="{{ .Url }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </nav>
+        <p class="footnote">Made with <a href="http://hugo.spf13.com/">Hugo</a> and a bit of love.</p>
+      </div>
+    </footer>
+
   </body>
 </html>
