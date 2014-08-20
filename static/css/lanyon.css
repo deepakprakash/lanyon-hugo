@@ -90,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75rem;
   color: #505050;
   font-size: 1.5rem;
+  text-align: center;
 }
 .masthead-title a {
   color: #505050;
@@ -99,9 +100,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
+  display: none;
 }
 
-@media (max-width: 48em) {
+/*@media (max-width: 48em) {
   .masthead-title {
     text-align: center;
   }
@@ -109,6 +111,17 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+*/
+
+@media (min-width: 48em) {
+  .masthead-title {
+    text-align: left;
+  }
+  .masthead-title small {
+    display: inline;
+  }
+}
+
 
 
 

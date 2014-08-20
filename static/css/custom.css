@@ -44,11 +44,12 @@ footer {
   width: 4em;
   height: 4em;
   float: right;
+  display: none;
 }
 
-@media (max-width: 48em) {
+@media (min-width: 48em) {
   .masthead-logo {
-    display: none;
+    display: inline;
   }
 }
 
