@@ -59,6 +59,11 @@ html {
     font-size: 18px;
   }
 }
+@media (min-width: 56em) {
+  html {
+    font-size: 20px;
+  }
+}
 
 body {
   color: #515151;
