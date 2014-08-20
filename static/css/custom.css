@@ -32,6 +32,11 @@ footer {
   margin-top: 0.5rem;
 }
 
+/* Header title */
+.masthead-title a:hover, .masthead-title a:focus {
+  border-bottom: none;
+}
+
 /* Header logo */
 .masthead-logo {
   margin: 0;
