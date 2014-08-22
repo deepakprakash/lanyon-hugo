@@ -48,6 +48,12 @@ footer {
   border-bottom: none;
 }
 
+.masthead-title a {
+  /*letter-spacing: -0.08rem;*/
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+}
+
 /* Header logo */
 .masthead-logo {
   margin: 0;
