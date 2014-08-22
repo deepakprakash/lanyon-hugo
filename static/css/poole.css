@@ -54,6 +54,8 @@ html {
   border-top: .25rem solid #DE002E;
   border-bottom: .25rem solid #DE002E;
   min-width: 320px;
+  text-rendering: optimizeLegibility;
+
 }
 @media (min-width: 38em) {
   html {
