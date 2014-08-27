@@ -453,7 +453,7 @@ tbody tr:nth-child(odd) th {
   font-size: 85%;
 }
 .related-posts li .summary {
-  font-size: 85%;
+  font-size: 75%;
 }
 /*.related-posts li a:hover {
   color: #268bd2;
