@@ -1,14 +1,10 @@
 {{ template "theme/chrome/default_head.html" . }}
 
-<div class="posts">
-  {{ range .Data.Pages }}
-    {{ if eq .Type .Type}}
-      <div class="post">
-        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      </div>
-    {{ end }}
-  {{ end }}
-</div>
 
+<ul class="related-posts">
+    {{ range .Data.Pages }}
+        {{ template "theme/shortcodes/summary.html" . }}
+    {{ end }}
+</ul>
 
 {{ template "theme/chrome/default_foot.html" . }}
