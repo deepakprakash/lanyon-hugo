@@ -1,0 +1,13 @@
+{{ with .Get "title" }}
+<h2>{{ . }}</h2>
+{{ end }}
+
+{{ $siteInfo := .Page.Site }}
+
+{{ with .Get "section" }}
+<ul class="related-posts">
+  {{ range $siteInfo.Sections.Get . }}
+    {{ template "theme/shortcodes/summary.html" .Page }}
+  {{ end }}
+</ul>
+{{ end }}
