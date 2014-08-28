@@ -1,10 +1,20 @@
 {{ template "theme/chrome/default_head.html" . }}
 
+{{ if and .Site.Params.RenderAsHomePage.section .Site.Params.RenderAsHomePage.fileName }}
+  {{ $section := .Site.Params.RenderAsHomePage.section }}
+  {{ $fileName := .Site.Params.RenderAsHomePage.fileName }}
 
-<ul class="related-posts">
-    {{ range .Data.Pages }}
-        {{ template "theme/shortcodes/summary.html" . }}
+  {{ range .Data.Pages }}
+    {{ if and (eq .Section $section) (eq .File.FileName $fileName) }}
+      {{ .Content }}
     {{ end }}
+  {{ end }}
+{{ else }}
+<ul class="related-posts">
+  {{ range .Data.Pages }}
+    {{ template "theme/shortcodes/summary.html" . }}
+  {{ end }}
 </ul>
+{{ end }}
 
 {{ template "theme/chrome/default_foot.html" . }}
