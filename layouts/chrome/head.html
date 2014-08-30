@@ -5,13 +5,16 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>
-    {{ if eq .Url "/" }}
-      {{ .Site.Params.Title }} &middot; {{ .Site.Params.Tagline }}
-    {{ else }}
-      {{ .Title }} &middot; {{ .Site.Params.Title }}
+  {{ if eq .Url "/" }}
+    <title>{{ .Site.Params.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.TagLine }}">
+  {{ else }}
+    <title>{{ .Title }} &middot; {{ .Site.Params.Title }}</title>
+
+    {{ if .IsPage }}
+      <meta name="description" content="{{ .Description }}">
     {{ end }}
-  </title>
+  {{ end }}
 
   <!-- CSS -->
   <!--
